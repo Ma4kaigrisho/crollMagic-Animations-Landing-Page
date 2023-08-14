@@ -5,10 +5,14 @@ $(document).ready(function(){
 
     var pinScene = new ScrollMagic.Scene({
         triggerElement: ".first",
-        pin: true
+        triggerHook: 0,
+        name: "Pin 1",
     })
+    .setPin(".first", {pushFollowers: false})
     .addIndicators()
     .addTo(controller);
+
+
     $('.project').each(function(){
         var ourScene = new ScrollMagic.Scene({
             triggerElement: this.children[0],
@@ -17,8 +21,9 @@ $(document).ready(function(){
         })
         .setClassToggle(this, 'fade-in')
         .addIndicators({
-            name: "fade scene 1",
-            colorTrigger: "black"
+            name: "fade scene",
+            colorTrigger: "black",
+            triggerName: "fade in"
         })
         .addTo(controller);
     });

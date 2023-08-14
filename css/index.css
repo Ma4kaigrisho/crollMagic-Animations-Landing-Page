@@ -14,7 +14,6 @@ nav {
   background-position: center;
   background-size: cover;
   text-align: center;
-  float: bottom;
   padding: 150px 0;
 }
 .first h1 {
@@ -38,6 +37,8 @@ li {
 .main {
   width: 100%;
   text-align: center;
+  position: relative;
+  background-color: #fff;
 }
 .main .project {
   padding: 100px 0;
