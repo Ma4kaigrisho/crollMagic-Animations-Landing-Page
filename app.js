@@ -2,15 +2,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
-    //pin
-    var pinScene = new ScrollMagic.Scene({
-        triggerElement: ".first",
-        triggerHook: 0,
-        name: "Pin 1",
-    })
-    .setPin(".first", {pushFollowers: false})
-    .addIndicators()
-    .addTo(controller);
+    // //pin
+    // var pinScene = new ScrollMagic.Scene({
+    //     triggerElement: ".first",
+    //     triggerHook: 0,
+    //     name: "Pin 1",
+    // })
+    // .setPin(".first", {pushFollowers: false})
+    // .addIndicators()
+    // .addTo(controller);
 
     //fade in
     $('.project').each(function(){
@@ -27,13 +27,27 @@ $(document).ready(function(){
         })
         .addTo(controller);
     });
-    //parallax
+    //image fade in
+    $(".fadeimg").each(function(){
+        var fadeImgScene = new ScrollMagic.Scene({
+            triggerElement: this,
 
-    var parallaxTl = new TimelineMax();
-    parallaxTl
-        .from('.content-wrapper', 1, {autoAlpha: 0, ease:Power0.easeNone})
-        .from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}, 0)
-        ;
+        })
+        .setClassToggle(this, "fade-in")
+        .addIndicators({
+            name: "fade img"
+        })
+        .addTo(controller);
+    })
+
+    var parSceneStart = new ScrollMagic.Scene({
+        triggerElement:".first",
+        triggerHook: 0,
+        duration: "100%"
+    })
+    .setTween(TweenMax.from('.bcgpara', 1, {y: '-27%', ease:Power0.easeNone}))
+    .addIndicators()
+    .addTo(controller);
 
     var parScene = new ScrollMagic.Scene({
         triggerElement:".bcg-parallax",
