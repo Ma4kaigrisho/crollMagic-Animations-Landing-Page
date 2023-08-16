@@ -1,10 +1,28 @@
 body {
   margin: 0;
   font-family: "Indie Flower", cursive;
+  scroll-behavior: smooth;
 }
 
 nav {
   font-family: "Indie Flower", cursive;
+  position: sticky;
+  top: 0;
+  transition: all 600ms ease-in-out;
+  z-index: 3;
+  padding: 10px 0;
+  font-size: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-active {
+  background-color: #006994;
+}
+.nav-active a {
+  color: white !important;
 }
 
 .first {
@@ -55,6 +73,35 @@ li {
   position: relative;
   background-color: #fff;
 }
+.main .section {
+  padding: 100px 0;
+  text-align: center;
+  border-bottom: 1px #ebebeb solid;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.main .section p {
+  max-width: 380px;
+  margin: 0 auto;
+  color: #294067;
+  height: 400px;
+}
+.main .scale-project {
+  padding: 100px 0;
+  text-align: center;
+  border-bottom: 1px #ebebeb solid;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.main .scale-project p {
+  max-width: 380px;
+  margin: 0 auto;
+  color: #294067;
+}
+.main .scale-project img {
+  width: 200px;
+  margin-bottom: 100px;
+}
 .main .project {
   padding: 100px 0;
   text-align: center;
@@ -67,10 +114,6 @@ li {
   width: 180px;
   height: 180px;
 }
-.main .project .fadeimg {
-  opacity: 0;
-  transform: translateY(50px);
-}
 .main .project p {
   max-width: 380px;
   margin: 0 auto;
@@ -78,22 +121,17 @@ li {
 }
 
 #project1 {
-  color: #fac819;
+  color: #0f76bc;
+}
+#project1 img {
+  width: 230px;
 }
 
 #project2 {
-  color: #0f76bc;
-}
-#project2 img {
-  width: 200px;
+  color: #fac819;
 }
 
 .project.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-img.fade-in {
   opacity: 1;
   transform: translateY(0);
 }

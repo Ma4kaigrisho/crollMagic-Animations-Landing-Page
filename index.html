@@ -11,43 +11,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="home"></div>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Depth</li>
-            <li>Inhabitants</li>
-            <li>Secrets</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project1">Inhabitants</a></li>
+            <li><a href="#project2">Depth</a></li>
+            <li><a href="#project3">Secrets</a></li>
         </ul>
     </nav>
+    <div class="container-fluid m-0 p-0 start">
     <div class="first">
         <div class="bcgpara"></div>
         <h1><b>The Power of the Sea</b></h1>
     </div>
     <div class="main container-fluid border-0">
         <div class="project" id="project1">
-            <img src="logo.png" alt="">
-            <h2>Depth</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet tortor non semper finibus. Sed et odio a augue laoreet blandit ac non est. Vestibulum sagittis erat vel efficitur lacinia. Curabitur vulputate tincidunt velit, vel placerat est facilisis eu. Pellentesque eget lobortis arcu. Suspendisse tincidunt nunc ut quam aliquet consequat. Aliquam sollicitudin purus nunc, in venenatis tellus commodo sed.</p>
-        </div>
-        <div class="bcg-parallax">
-            <div class="bcg"></div>
-            <div class="content-wrapper">
-                <h1>Section with parralex Effect</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet tortor non semper finibus. Sed et odio a augue laoreet blandit ac non est. Vestibulum sagittis erat vel efficitur lacinia. Curabitur vulputate tincidunt velit, vel placerat est facilisis eu. Pellentesque eget lobortis arcu. Suspendisse tincidunt nunc ut quam aliquet consequat. Aliquam sollicitudin purus nunc, in venenatis tellus commodo sed.</p>
-            </div>
-        </div>
-        <div class="project" id="project2">
             <img src="logo1.png" alt="">
             <h2>Inhabitants</h2>
             <img src="/dolphin.jpg" class="img-thumbnail border-0 fadeimg" alt="...">
             <img src="/whale.jpg" class="img-thumbnail border-0 fadeimg" alt="...">
             <img src="/shark.jpeg" class="img-thumbnail border-0 fadeimg" alt="...">
         </div>
-        <div class="project" id="project3">
-            <img src="logo3.jpg" alt="">
-            <h2>Secrets</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet tortor non semper finibus. Sed et odio a augue laoreet blandit ac non est. Vestibulum sagittis erat vel efficitur lacinia. Curabitur vulputate tincidunt velit, vel placerat est facilisis eu. Pellentesque eget lobortis arcu. Suspendisse tincidunt nunc ut quam aliquet consequat. Aliquam sollicitudin purus nunc, in venenatis tellus commodo sed.</p>
+        <div class="section" id="project2">
+            <img src="logo.png" alt="">
+            <h2 class="headline">Depth</h2>
+            <p id="text"></p>
         </div>
+        <div class="bcg-parallax">
+            <div class="bcg"></div>
+            <div class="content-wrapper">
+                <h1>Section with parralex Effect</h1>
+                <p></p>
+            </div>
+        </div>
+        <div class="scale-project" id="project3">
+            <img src="logo3.jpg" alt="" id="scaleimg">
+            <h2>Secrets</h2>
+            <p>The secrets of the sea are a captivating tapestry woven from ancient mysteries and unique life forms. As exploration deepens, we uncover the extraordinary adaptations that allow creatures to flourish in the harshest environments. Bioluminescence illuminates the dark expanse, a phenomenon as awe-inspiring as the most poetic verses. The ocean's secrets remain guarded by its immense pressure and vastness, inviting us to unravel its stories and protect its delicate balance.</p>
+        </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

@@ -1,9 +1,27 @@
 body{
     margin:0;
     font-family: 'Indie Flower', cursive;
+    scroll-behavior: smooth;
 }
 nav{
     font-family: 'Indie Flower', cursive;
+    position: sticky;
+    top: 0;
+    transition: all 600ms ease-in-out;
+    z-index: 3;
+    padding: 10px 0;
+    font-size: 20px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.nav-active{
+    background-color: #006994;
+    a{
+        color: white !important; 
+    }
+    
 }
 .first{
     padding: 150px 0;
@@ -49,6 +67,35 @@ li{
     text-align: center;
     position: relative;
     background-color: #fff;
+    .section{
+        padding: 100px 0;
+        text-align: center;
+        border-bottom: 1px #ebebeb solid;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+        p{
+            max-width: 380px;
+            margin: 0 auto;
+            color: #294067;
+            height: 400px;
+        }
+    }
+    .scale-project{
+        padding: 100px 0;
+        text-align: center;
+        border-bottom: 1px #ebebeb solid;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+        p{
+            max-width: 380px;
+            margin: 0 auto;
+            color: #294067;
+        }
+        img{
+            width: 200px;
+            margin-bottom: 100px;
+        }
+    }
     .project{
         padding: 100px 0;
         text-align: center;
@@ -60,10 +107,6 @@ li{
             width: 180px;
             height: 180px;
         }
-        .fadeimg{
-            opacity: 0;
-            transform: translateY(50px);
-        }
         p{
             max-width: 380px;
             margin: 0 auto;
@@ -72,19 +115,15 @@ li{
     }
 }
 #project1{
-    color: #fac819;
-}
-#project2{
-   color: #0f76bc; 
-   img{
-    width: 200px;
+    color: #0f76bc; 
+    img{
+    width: 230px;
    }
 }
-.project.fade-in{
-    opacity: 1;
-    transform: translateY(0);
+#project2{
+   color: #fac819;
 }
-img.fade-in{
+.project.fade-in{
     opacity: 1;
     transform: translateY(0);
 }
